@@ -346,6 +346,23 @@ section:nth-child(3) {
     min-width: 0;
 }
 
+.nav-logo h2 a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-logo h2 a:hover {
+    opacity: 0.85;
+}
+
 .nav-logo h2 {
     font-size: 1.25rem;
     font-weight: 600;
