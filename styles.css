@@ -364,7 +364,7 @@ section:nth-child(3) {
 }
 
 .nav-logo h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
     -webkit-background-clip: text;
@@ -383,14 +383,15 @@ section:nth-child(3) {
     letter-spacing: -0.025em;
 }
 
+/* LOGO SIZE — Change width/height below to resize the nav logo image */
 .nav-logo img {
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     transition: all 0.2s ease;
     vertical-align: middle;
     flex-shrink: 0;
-    max-width: 32px;
-    max-height: 32px;
     object-fit: contain;
 }
 
@@ -908,18 +909,22 @@ body {
     box-sizing: border-box;
 }
 
+/* ============================================================
+   SITE COLORS — Edit these to change the entire color scheme.
+   Each color is used throughout the site automatically.
+   ============================================================ */
 :root {
-    --primary-green: #1a2f0f;
-    --sage-green: #3d4f37;
-    --light-sage: #6b7d6a;
-    --sand: #e8dcc6;
-    --cream: #fafaf8;
-    --clay: #8b6f47;
-    --charcoal: #1a1a1a;
-    --text-dark: #2c2c2c;
-    --text-light: #6b6b6b;
-    --white: #ffffff;
-    --border-radius: 12px;
+    --primary-green: #1a2f0f;   /* Main dark green (headings, buttons, nav) */
+    --sage-green: #3d4f37;      /* Softer green (accents, gradients) */
+    --light-sage: #6b7d6a;      /* Light green (subtle accents) */
+    --sand: #e8dcc6;            /* Warm sand tone (backgrounds) */
+    --cream: #fafaf8;           /* Off-white page background */
+    --clay: #8b6f47;            /* Earthy brown (secondary buttons) */
+    --charcoal: #1a1a1a;        /* Near-black (footer background) */
+    --text-dark: #2c2c2c;       /* Main body text color */
+    --text-light: #6b6b6b;      /* Lighter paragraph text */
+    --white: #ffffff;            /* Pure white */
+    --border-radius: 12px;      /* Rounded corners on cards */
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -5300,6 +5305,34 @@ html {
     background: var(--white);
 }
 
+.ip-placeholder {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ip-placeholder h2 {
+    font-size: 2.8rem;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.ip-placeholder p {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+}
+
+.ip-placeholder-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .ip-intro-wrapper {
     display: flex;
     align-items: center;
@@ -7276,5 +7309,156 @@ textarea:focus {
 @keyframes spinner {
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* ============================================================
+   LEARNING AREA SECTIONS — Used on the merged Learning & Programs page
+   ============================================================ */
+.la-section {
+    padding: 80px 0;
+}
+
+.la-white {
+    background: var(--white);
+}
+
+.la-cream {
+    background: var(--cream);
+}
+
+.la-block {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.la-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.la-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    opacity: 0.25;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.la-heading h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.la-lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.la-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.la-topic {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    background: rgba(26, 47, 15, 0.06);
+    border-radius: 50px;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.la-topic:hover {
+    background: rgba(26, 47, 15, 0.12);
+    transform: translateY(-1px);
+}
+
+/* Learning Areas Visual Break */
+.la-break {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+.la-break-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.la-break-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 47, 15, 0.85), rgba(61, 79, 55, 0.8));
+}
+
+.la-break-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 2rem;
+}
+
+.la-break-content h2 {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.la-break-content p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+/* Learning Area Responsive */
+@media (max-width: 768px) {
+    .la-section {
+        padding: 50px 0;
+    }
+
+    .la-heading {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .la-number {
+        font-size: 2rem;
+    }
+
+    .la-heading h2 {
+        font-size: 1.6rem;
+    }
+
+    .la-break {
+        height: 280px;
+    }
+
+    .la-break-content h2 {
+        font-size: 1.6rem;
     }
 }
