@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jamyang Ecoversity</title>
+    <meta name="description" content="Get in touch with Jamyang Ecoversity. Contact us for programs, partnerships, or to learn more about regenerative education.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>
+                        <img src="pictures/logo.png" alt="Jamyang Ecoversity Logo" width="40" height="40" style="margin-right: 12px; vertical-align: middle; border-radius: 8px; box-shadow: 0 2px 8px rgba(26, 47, 15, 0.15); transition: all 0.3s ease;">
+                        <span style="display: inline-block; vertical-align: middle;">Jamyang Ecoversity</span>
+                    </h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="learning-areas.html" class="nav-link">Learning Areas</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="campus.html" class="nav-link">Campus</a></li>
+                    <li><a href="impact.html" class="nav-link">Impact</a></li>
+                    <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero with Background Image -->
+        <section class="ct-hero">
+            <img src="pictures/view.png" alt="" class="ct-hero-bg">
+            <div class="ct-hero-overlay"></div>
+            <div class="ct-hero-content">
+                <h1>Contact Us</h1>
+                <p>We welcome conversations with educators, partners, practitioners, supporters, and communities drawn to regenerative learning.</p>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="ct-intro">
+            <div class="container">
+                <div class="ct-section-head">
+                    <h2>Let's Connect</h2>
+                    <p>Whether you are interested in learning, partnering, supporting, or simply want to explore what regenerative education looks like in practice, we would love to hear from you.</p>
+                </div>
+                <div class="ct-info-grid">
+                    <div class="ct-info-card">
+                        <h3>Email</h3>
+                        <p>jamyang.ecoversity@gmail.com</p>
+                        <span>For general inquiries and information</span>
+                    </div>
+                    <div class="ct-info-card">
+                        <h3>Phone</h3>
+                        <p>506-897-1525</p>
+                        <span>Mon-Fri, 9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="ct-info-card">
+                        <h3>Location</h3>
+                        <p>Jamyang Ecoversity Campus</p>
+                        <span>Visits by appointment only</span>
+                    </div>
+                    <div class="ct-info-card">
+                        <h3>Office Hours</h3>
+                        <p>Mon-Fri: 9-5 | Sat: 10-2</p>
+                        <span>Closed on Sundays and holidays</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form + Map Side by Side -->
+        <section class="ct-form-section">
+            <div class="container">
+                <div class="ct-section-head">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we will get back to you as soon as possible.</p>
+                </div>
+                <div class="ct-form-wrapper">
+                    <form class="ct-form" id="contactForm">
+                        <div class="ct-form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="ct-form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="programs">Program Information</option>
+                                <option value="application">Program Application</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="donation">Donation/Support</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="general">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us about your interest, questions, or how you'd like to collaborate..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">I'd like to receive updates about Jamyang Ecoversity's programs and impact</label>
+                        </div>
+                        <div class="ct-form-actions">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="reset" class="btn btn-outline">Clear Form</button>
+                        </div>
+                    </form>
+                    <div class="ct-sidebar">
+                        <div class="ct-map-box">
+                            <h3>Find Us</h3>
+                            <p>Our campus is situated within a living landscape of gardens, forests, and working demonstration systems.</p>
+                            <div class="ct-map-placeholder">
+                                <p>Map and directions coming soon</p>
+                            </div>
+                            <p><strong>Email:</strong> jamyang.ecoversity@gmail.com</p>
+                            <p><strong>Phone:</strong> 506-897-1525</p>
+                        </div>
+                        <div class="ct-response-box">
+                            <h3>Response Times</h3>
+                            <div class="ct-response-item">
+                                <h4>General Inquiries</h4>
+                                <p>2-3 business days</p>
+                            </div>
+                            <div class="ct-response-item">
+                                <h4>Program Applications</h4>
+                                <p>Within 1 week</p>
+                            </div>
+                            <div class="ct-response-item">
+                                <h4>Partnership Proposals</h4>
+                                <p>Within 5 business days</p>
+                            </div>
+                            <div class="ct-response-item">
+                                <h4>Urgent Matters</h4>
+                                <p>Call 506-897-1525</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Break -->
+        <section class="ct-break">
+            <img src="pictures/paddy fields.png" alt="" class="ct-break-bg">
+            <div class="ct-break-overlay"></div>
+            <div class="ct-break-content">
+                <h2>Every Conversation Plants a Seed</h2>
+                <p>From a simple question to a deep partnership, every connection with us is a step toward regenerative change.</p>
+            </div>
+        </section>
+
+        <!-- Social Media (6 cards → 3×2 = even) -->
+        <section class="ct-social">
+            <div class="container">
+                <div class="ct-section-head">
+                    <h2>Connect With Us</h2>
+                    <p>Follow our journey and join the global conversation about regenerative education.</p>
+                </div>
+                <div class="ct-social-grid">
+                    <a href="#" class="ct-social-card" aria-label="Facebook">
+                        <h3>Facebook</h3>
+                        <p>Updates and community discussions</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="Instagram">
+                        <h3>Instagram</h3>
+                        <p>Visual stories from campus and programs</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="Twitter">
+                        <h3>Twitter</h3>
+                        <p>News, insights, and regenerative resources</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="YouTube">
+                        <h3>YouTube</h3>
+                        <p>Workshops, talks, and educational content</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="LinkedIn">
+                        <h3>LinkedIn</h3>
+                        <p>Professional updates and partnerships</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="Newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Monthly updates on programs and impact</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (6 cards → 2×3 = even) -->
+        <section class="ct-faq">
+            <div class="container">
+                <div class="ct-section-head ct-section-head-light">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="ct-faq-grid">
+                    <div class="ct-faq-item">
+                        <h3>How can I apply to your programs?</h3>
+                        <p>Visit our Programs page or contact us directly for application details. We offer rolling admissions for most programs.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>Do you offer financial aid or scholarships?</h3>
+                        <p>Yes. We offer need-based scholarships and fellowships. Visit our Get Involved page for details on sponsoring a learner or applying for support.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>Can I visit the campus?</h3>
+                        <p>Campus visits are available by appointment. Please contact us at least two weeks in advance to schedule a tour.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>How can I partner with Jamyang Ecoversity?</h3>
+                        <p>We welcome partnerships with educational institutions, community organizations, businesses, and government agencies worldwide. Reach out with your ideas.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>Do you offer online or distance learning?</h3>
+                        <p>Our core programs are residential and hands-on. We are developing digital resources and remote workshops. Join our newsletter for updates.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>How can I volunteer or contribute expertise?</h3>
+                        <p>We welcome volunteers and practitioners from around the world. Visit our Get Involved page or contact us with your skills and availability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jamyang Ecoversity</h3>
+                    <p>Education for Life, Purpose, and Regeneration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learning Areas</h4>
+                    <ul>
+                        <li><a href="learning-areas.html">Regenerative Agriculture</a></li>
+                        <li><a href="learning-areas.html">Natural Building</a></li>
+                        <li><a href="learning-areas.html">Traditional Knowledge</a></li>
+                        <li><a href="learning-areas.html">Holistic Wellbeing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Email: jamyang.ecoversity@gmail.com</p>
+                    <p>Phone: 506-897-1525</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"></a>
+                        <a href="#" aria-label="Instagram"></a>
+                        <a href="#" aria-label="Twitter"></a>
+                        <a href="#" aria-label="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jamyang Ecoversity. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
