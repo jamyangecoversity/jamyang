@@ -4078,7 +4078,6 @@ html {
     height: 100%;
     object-fit: cover;
     display: block;
-    min-height: 360px;
 }
 
 .pg-intro-text {
