@@ -104,13 +104,17 @@ document.querySelectorAll('.btn').forEach(button => {
         if (this.tagName === 'BUTTON' || this.getAttribute('type') === 'submit') {
             // Add loading state for form submissions
             if (!this.classList.contains('no-loading')) {
-                this.classList.add('loading');
-                this.disabled = true;
+                const btn = this;
+                // Delay disable so the form submission goes through first
+                setTimeout(() => {
+                    btn.classList.add('loading');
+                    btn.disabled = true;
+                }, 100);
                 
                 // Reset after 3 seconds (adjust as needed)
                 setTimeout(() => {
-                    this.classList.remove('loading');
-                    this.disabled = false;
+                    btn.classList.remove('loading');
+                    btn.disabled = false;
                 }, 3000);
             }
         }
