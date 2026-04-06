@@ -89,6 +89,10 @@
                     <p>Fill out the form below and we will get back to you as soon as possible.</p>
                 </div>
                 <div class="ct-form-wrapper">
+                    <div id="formSuccess" style="display:none; background: var(--cream); border: 2px solid var(--sage-green); border-radius: 12px; padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">Thank you for reaching out!</h3>
+                        <p style="color: var(--text-light);">Your message has been sent successfully. We will get back to you as soon as possible.</p>
+                    </div>
                     <form class="ct-form" id="contactForm" action="https://formspree.io/f/meepvayv" method="POST">
                         <div class="ct-form-row">
                             <div class="form-group">
@@ -286,5 +290,28 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // AJAX form submission — stays on page instead of redirecting to Formspree
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                    form.reset();
+                } else {
+                    alert('Oops! Something went wrong. Please try again.');
+                }
+            }).catch(function() {
+                alert('Oops! Something went wrong. Please try again.');
+            });
+        });
+    </script>
 </body>
 </html>
