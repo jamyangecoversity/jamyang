@@ -98,23 +98,21 @@ function validateEmail(email) {
     return emailRegex.test(email);
 }
 
-// Add loading states for buttons
+// Add loading states for buttons (skip buttons inside forms that submit to an external service)
 document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('click', function(e) {
+        // Skip submit buttons inside forms with an action (e.g. Formspree)
+        const parentForm = this.closest('form');
+        if (parentForm && parentForm.getAttribute('action')) return;
+
         if (this.tagName === 'BUTTON' || this.getAttribute('type') === 'submit') {
-            // Add loading state for form submissions
             if (!this.classList.contains('no-loading')) {
-                const btn = this;
-                // Delay disable so the form submission goes through first
-                setTimeout(() => {
-                    btn.classList.add('loading');
-                    btn.disabled = true;
-                }, 100);
+                this.classList.add('loading');
+                this.disabled = true;
                 
-                // Reset after 3 seconds (adjust as needed)
                 setTimeout(() => {
-                    btn.classList.remove('loading');
-                    btn.disabled = false;
+                    this.classList.remove('loading');
+                    this.disabled = false;
                 }, 3000);
             }
         }
