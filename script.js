@@ -186,6 +186,68 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
     });
 });
 
+// Hero Image Slideshow
+(function() {
+    const slideshow = document.querySelector('.hero-slideshow');
+    if (!slideshow) return;
+    const slides = slideshow.querySelectorAll('img');
+    if (slides.length <= 1) return;
+    let current = 0;
+    setInterval(() => {
+        slides[current].classList.remove('slide-active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('slide-active');
+    }, 4000);
+})();
+
+// Client-side Search
+(function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const searchOverlay = document.getElementById('searchOverlay');
+    if (!searchInput || !searchResults) return;
+
+    const pages = [
+        { title: 'Home', url: 'index.html', keywords: 'home education regenerative agriculture natural building cultural wisdom wellbeing bhutan school' },
+        { title: 'About Jamyang Ecoversity', url: 'about.html', keywords: 'about story vision mission values founder regeneration rootedness community stewardship approach' },
+        { title: 'Learning & Programs', url: 'programs.html', keywords: 'programs learning areas agriculture food systems natural building traditional knowledge holistic wellbeing livelihoods enterprise stewardship technology leadership foundational certificate' },
+        { title: 'Campus & Model', url: 'campus.html', keywords: 'campus infrastructure farm garden building workshop accommodation kitchen governance phases design' },
+        { title: 'Impact', url: 'impact.html', keywords: 'impact outcomes stories measurement growing' },
+        { title: 'Get Involved', url: 'get-involved.html', keywords: 'get involved learner support donate partner volunteer expertise contribute scholarship' },
+        { title: 'Contact', url: 'contact.html', keywords: 'contact email phone address message form reach' }
+    ];
+
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+        searchResults.innerHTML = '';
+        if (query.length < 2) return;
+
+        const matches = pages.filter(p =>
+            p.title.toLowerCase().includes(query) || p.keywords.includes(query)
+        );
+
+        if (matches.length === 0) {
+            searchResults.innerHTML = '<p class="search-no-results">No results found. Try a different term.</p>';
+            return;
+        }
+
+        matches.forEach(p => {
+            const item = document.createElement('a');
+            item.href = p.url;
+            item.className = 'search-result-item';
+            item.innerHTML = '<h4>' + p.title + '</h4><p>' + p.url + '</p>';
+            searchResults.appendChild(item);
+        });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchOverlay) {
+            searchOverlay.classList.remove('active');
+        }
+    });
+})();
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     // Add active state to current page navigation

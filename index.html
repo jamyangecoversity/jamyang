@@ -73,7 +73,7 @@
                 <div class="nav-logo">
                     <h2>
                         <a href="index.html">
-                            <img src="pictures/logo.png" alt="Jamyang Ecoversity Logo" width="40" height="40" style="margin-right: 12px; vertical-align: middle; border-radius: 8px; box-shadow: 0 2px 8px rgba(26, 47, 15, 0.15); transition: all 0.3s ease;">
+                            <img src="pictures/logo.png" alt="Jamyang Ecoversity Logo">
                             <span style="display: inline-block; vertical-align: middle;">Jamyang Ecoversity</span>
                         </a>
                     </h2>
@@ -88,6 +88,9 @@
                     <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <button class="nav-search-btn" onclick="document.getElementById('searchOverlay').classList.add('active');document.getElementById('searchInput').focus();" aria-label="Search">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -97,24 +100,44 @@
         </nav>
     </header>
 
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="search-close" onclick="document.getElementById('searchOverlay').classList.remove('active');">&times;</button>
+        <div class="search-container">
+            <h2>Search Jamyang Ecoversity</h2>
+            <div class="search-input-wrap">
+                <input type="text" id="searchInput" placeholder="Try: programs, agriculture, get involved..." autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
     <main>
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
+                <span class="hero-badge">A Regenerative Education Institution in Bhutan</span>
                 <h1 class="hero-title">Education Rooted in Nature, Culture, and Purpose</h1>
-                <p class="hero-subtitle">Jamyang Ecoversity is an emerging living-learning center in Bhutan — developing hands-on education for regenerative living, meaningful livelihood, and holistic human growth.</p>
+                <p class="hero-subtitle">Jamyang Ecoversity is building a hands-on school for regenerative living — where learners grow food, build with natural materials, and develop the skills and clarity to live meaningful lives.</p>
                 <div class="hero-buttons">
+                    <a href="#start-here" class="btn btn-start-here">Start Here ↓</a>
                     <a href="about.html" class="btn btn-primary">Learn About Us</a>
                     <a href="get-involved.html" class="btn btn-secondary">Support the Mission</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="pictures2/paddy_field-View.jpg" alt="Lush green paddy fields representing regenerative agriculture" class="hero-img">
+                <div class="hero-slideshow">
+                    <img src="pictures2/paddy_field-View.jpg" alt="Paddy fields in Bhutan" class="slide-active">
+                    <img src="pictures2/paddy_field-View1.jpg" alt="Green landscapes of Bhutan">
+                    <img src="pictures2/Bhutanese farming in a terraced garden.png" alt="Terraced farming in Bhutan">
+                    <img src="pictures2/teaching_youth.png" alt="Teaching and learning together">
+                    <img src="pictures2/making_garden.jpg" alt="Building a garden together">
+                </div>
             </div>
         </section>
 
-        <!-- Intro Section -->
-        <section class="intro">
+        <!-- Intro Section (Start Here anchor) -->
+        <section class="intro" id="start-here">
             <div class="container">
                 <div class="intro-wrapper">
                     <div class="intro-image">
@@ -122,7 +145,12 @@
                     </div>
                     <div class="intro-content">
                         <h2>A Different Kind of Learning</h2>
-                        <p>We are building a place where people learn by doing — growing food, building with natural materials, practicing traditional crafts, and developing inner clarity. Our approach connects ecological care, cultural wisdom, practical skills, and personal growth into one integrated experience. Rooted in Bhutan, designed to be adapted anywhere.</p>
+                        <ul class="quick-list">
+                            <li><strong>Learn by doing</strong> — grow food, build with natural materials, practice traditional crafts</li>
+                            <li><strong>Rooted in place</strong> — connected to land, culture, and community in Bhutan</li>
+                            <li><strong>Holistic growth</strong> — ecological care, practical skills, and personal development in one experience</li>
+                            <li><strong>Designed to adapt</strong> — a model that can be replicated in communities anywhere</li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@
                 <div class="nav-logo">
                     <h2>
                         <a href="index.html">
-                            <img src="pictures/logo.png" alt="Jamyang Ecoversity Logo" width="40" height="40" style="margin-right: 12px; vertical-align: middle; border-radius: 8px; box-shadow: 0 2px 8px rgba(26, 47, 15, 0.15); transition: all 0.3s ease;">
+                            <img src="pictures/logo.png" alt="Jamyang Ecoversity Logo">
                             <span style="display: inline-block; vertical-align: middle;">Jamyang Ecoversity</span>
                         </a>
                     </h2>
@@ -29,6 +29,9 @@
                     <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <button class="nav-search-btn" onclick="document.getElementById('searchOverlay').classList.add('active');document.getElementById('searchInput').focus();" aria-label="Search">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -37,6 +40,17 @@
             </div>
         </nav>
     </header>
+
+    <div class="search-overlay" id="searchOverlay">
+        <button class="search-close" onclick="document.getElementById('searchOverlay').classList.remove('active');">&times;</button>
+        <div class="search-container">
+            <h2>Search Jamyang Ecoversity</h2>
+            <div class="search-input-wrap">
+                <input type="text" id="searchInput" placeholder="Try: programs, agriculture, get involved..." autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
 
     <main>
         <!-- HERO IMAGE — Change the image in src="pictures2/..." below -->
