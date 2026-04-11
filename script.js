@@ -200,12 +200,14 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
     }, 4000);
 })();
 
-// Client-side Search
+// Inline Nav Search — expand/collapse + dropdown results
 (function() {
+    const navSearch = document.getElementById('navSearch');
     const searchInput = document.getElementById('searchInput');
-    const searchResults = document.getElementById('searchResults');
-    const searchOverlay = document.getElementById('searchOverlay');
-    if (!searchInput || !searchResults) return;
+    const searchDropdown = document.getElementById('searchDropdown');
+    if (!navSearch || !searchInput || !searchDropdown) return;
+
+    const searchBtn = navSearch.querySelector('.nav-search-btn');
 
     const pages = [
         { title: 'Home', url: 'index.html', keywords: 'home education regenerative agriculture natural building cultural wisdom wellbeing bhutan school' },
@@ -217,33 +219,61 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
         { title: 'Contact', url: 'contact.html', keywords: 'contact email phone address message form reach' }
     ];
 
+    // Toggle open/close
+    searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (navSearch.classList.contains('open')) {
+            navSearch.classList.remove('open');
+            searchDropdown.classList.remove('visible');
+            searchInput.value = '';
+        } else {
+            navSearch.classList.add('open');
+            searchInput.focus();
+        }
+    });
+
+    // Search on typing
     searchInput.addEventListener('input', function() {
         const query = this.value.trim().toLowerCase();
-        searchResults.innerHTML = '';
-        if (query.length < 2) return;
-
-        const matches = pages.filter(p =>
-            p.title.toLowerCase().includes(query) || p.keywords.includes(query)
-        );
-
-        if (matches.length === 0) {
-            searchResults.innerHTML = '<p class="search-no-results">No results found. Try a different term.</p>';
+        searchDropdown.innerHTML = '';
+        if (query.length < 2) {
+            searchDropdown.classList.remove('visible');
             return;
         }
 
-        matches.forEach(p => {
-            const item = document.createElement('a');
-            item.href = p.url;
-            item.className = 'search-result-item';
-            item.innerHTML = '<h4>' + p.title + '</h4><p>' + p.url + '</p>';
-            searchResults.appendChild(item);
+        const matches = pages.filter(function(p) {
+            return p.title.toLowerCase().includes(query) || p.keywords.includes(query);
         });
+
+        if (matches.length === 0) {
+            searchDropdown.innerHTML = '<p class="search-no-results">No results found.</p>';
+        } else {
+            matches.forEach(function(p) {
+                var item = document.createElement('a');
+                item.href = p.url;
+                item.className = 'search-result-item';
+                item.innerHTML = '<h4>' + p.title + '</h4><p>' + p.url + '</p>';
+                searchDropdown.appendChild(item);
+            });
+        }
+        searchDropdown.classList.add('visible');
     });
 
-    // Close on Escape key
+    // Close on Escape
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && searchOverlay) {
-            searchOverlay.classList.remove('active');
+        if (e.key === 'Escape') {
+            navSearch.classList.remove('open');
+            searchDropdown.classList.remove('visible');
+            searchInput.value = '';
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navSearch.contains(e.target)) {
+            navSearch.classList.remove('open');
+            searchDropdown.classList.remove('visible');
+            searchInput.value = '';
         }
     });
 })();

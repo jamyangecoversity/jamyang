@@ -29,9 +29,13 @@
                     <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
-                <button class="nav-search-btn" onclick="document.getElementById('searchOverlay').classList.add('active');document.getElementById('searchInput').focus();" aria-label="Search">
-                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                </button>
+                <div class="nav-search" id="navSearch">
+                    <input type="text" class="nav-search-input" id="searchInput" placeholder="Search..." autocomplete="off">
+                    <button class="nav-search-btn" aria-label="Search">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </button>
+                    <div class="search-dropdown" id="searchDropdown"></div>
+                </div>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -40,17 +44,6 @@
             </div>
         </nav>
     </header>
-
-    <div class="search-overlay" id="searchOverlay">
-        <button class="search-close" onclick="document.getElementById('searchOverlay').classList.remove('active');">&times;</button>
-        <div class="search-container">
-            <h2>Search Jamyang Ecoversity</h2>
-            <div class="search-input-wrap">
-                <input type="text" id="searchInput" placeholder="Try: programs, agriculture, get involved..." autocomplete="off">
-            </div>
-            <div class="search-results" id="searchResults"></div>
-        </div>
-    </div>
 
     <main>
         <!-- Hero with Background Image -->

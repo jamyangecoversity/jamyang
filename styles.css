@@ -385,10 +385,10 @@ section:nth-child(3) {
 
 /* LOGO SIZE — Change width/height below to resize the nav logo image */
 .nav-logo img {
-    width: 52px;
-    height: 52px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     transition: all 0.2s ease;
     vertical-align: middle;
     flex-shrink: 0;
@@ -453,7 +453,15 @@ section:nth-child(3) {
     width: 50%;
 }
 
-/* Search Button in Nav */
+/* Inline Nav Search */
+.nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+}
+
 .nav-search-btn {
     background: none;
     border: none;
@@ -464,8 +472,6 @@ section:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 0.5rem;
-    flex-shrink: 0;
 }
 
 .nav-search-btn:hover {
@@ -480,122 +486,90 @@ section:nth-child(3) {
     stroke-width: 2;
 }
 
-/* Search Overlay */
-.search-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(250, 250, 248, 0.97);
-    backdrop-filter: blur(20px);
-    z-index: 2000;
-    display: none;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 15vh;
-}
-
-.search-overlay.active {
-    display: flex;
-}
-
-.search-container {
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-}
-
-.search-container h2 {
-    font-size: 1.6rem;
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-.search-input-wrap {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.search-input-wrap input {
-    width: 100%;
-    padding: 18px 24px;
-    padding-right: 50px;
-    font-size: 1.1rem;
-    border: 2px solid rgba(26, 47, 15, 0.15);
-    border-radius: 50px;
-    background: var(--white);
+.nav-search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    font-family: inherit;
     color: var(--text-dark);
     outline: none;
-    transition: border-color 0.3s ease;
-    font-family: inherit;
+    transition: width 0.35s ease, padding 0.35s ease, border 0.35s ease;
+    border-radius: 50px;
 }
 
-.search-input-wrap input:focus {
+.nav-search.open .nav-search-input {
+    width: 220px;
+    padding: 8px 16px;
+    border: 1.5px solid rgba(26, 47, 15, 0.2);
+    background: var(--white);
+}
+
+.nav-search.open .nav-search-input:focus {
     border-color: var(--primary-green);
 }
 
-.search-input-wrap input::placeholder {
+.nav-search-input::placeholder {
     color: var(--text-light);
+    font-size: 0.85rem;
 }
 
-.search-close {
+/* Search Dropdown Results */
+.search-dropdown {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--text-dark);
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.2s ease;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 320px;
+    max-height: 360px;
+    overflow-y: auto;
+    background: var(--white);
+    border: 1px solid rgba(26, 47, 15, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    display: none;
+    z-index: 1500;
 }
 
-.search-close:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-.search-results {
-    text-align: left;
+.search-dropdown.visible {
+    display: block;
 }
 
 .search-result-item {
     display: block;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     color: var(--text-dark);
     transition: background 0.2s ease;
-    margin-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
 }
 
 .search-result-item:hover {
-    background: rgba(26, 47, 15, 0.06);
+    background: rgba(26, 47, 15, 0.05);
 }
 
 .search-result-item h4 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: var(--primary-green);
-    margin-bottom: 0.25rem;
+    margin: 0 0 2px 0;
+    font-weight: 600;
 }
 
 .search-result-item p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-light);
     margin: 0;
 }
 
 .search-no-results {
     color: var(--text-light);
-    font-size: 1rem;
-    padding: 1rem 0;
+    font-size: 0.9rem;
+    padding: 1rem;
+    text-align: center;
 }
 
 .hamburger {
@@ -912,6 +886,21 @@ section:nth-child(3) {
     .hero-badge {
         font-size: 0.75rem;
         padding: 6px 16px;
+    }
+
+    .nav-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nav-search.open .nav-search-input {
+        width: 140px;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .search-dropdown {
+        width: 260px;
     }
     
     .nav-container {
