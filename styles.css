@@ -385,15 +385,16 @@ section:nth-child(3) {
 
 /* LOGO SIZE — Change width/height below to resize the nav logo image */
 .nav-logo img {
-    width: 64px;
-    height: 64px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
     transition: all 0.2s ease;
     vertical-align: middle;
     flex-shrink: 0;
     object-fit: contain;
-    border: 2px solid rgba(26, 47, 15, 0.12);
+    border: none;
 }
 
 .nav-logo span {
@@ -889,8 +890,8 @@ section:nth-child(3) {
     }
 
     .nav-logo img {
-        width: 48px;
-        height: 48px;
+        width: 60px;
+        height: 60px;
     }
 
     .nav-search.open .nav-search-input {
