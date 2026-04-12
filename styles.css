@@ -469,10 +469,12 @@ section:nth-child(3) {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 8px;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .nav-search-btn:hover {
@@ -488,28 +490,31 @@ section:nth-child(3) {
 }
 
 .nav-search-input {
-    max-width: 0;
-    padding: 0;
-    border: 1.5px solid transparent;
-    background: transparent;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    padding: 8px 16px;
+    border: 1.5px solid rgba(26, 47, 15, 0.2);
+    background: var(--white);
     font-size: 0.9rem;
     font-family: inherit;
     color: var(--text-dark);
     outline: none;
+    border-radius: 50px;
     opacity: 0;
     pointer-events: none;
-    overflow: hidden;
-    transition: max-width 0.3s ease, padding 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-    border-radius: 50px;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    margin-right: 4px;
 }
 
 .nav-search.open .nav-search-input {
-    max-width: 220px;
-    padding: 8px 16px;
-    border-color: rgba(26, 47, 15, 0.2);
-    background: var(--white);
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
 }
 
 .nav-search.open .nav-search-input:focus {
@@ -899,8 +904,8 @@ section:nth-child(3) {
         height: 72px;
     }
 
-    .nav-search.open .nav-search-input {
-        max-width: 140px;
+    .nav-search-input {
+        width: 160px;
         padding: 6px 12px;
         font-size: 0.85rem;
     }
