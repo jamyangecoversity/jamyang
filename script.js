@@ -222,13 +222,15 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
     // Toggle open/close
     searchBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         if (navSearch.classList.contains('open')) {
             navSearch.classList.remove('open');
             searchDropdown.classList.remove('visible');
             searchInput.value = '';
+            searchInput.blur();
         } else {
             navSearch.classList.add('open');
-            searchInput.focus();
+            setTimeout(function() { searchInput.focus(); }, 50);
         }
     });
 
