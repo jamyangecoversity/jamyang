@@ -200,16 +200,15 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
     }, 4000);
 })();
 
-// Inline Nav Search — expand/collapse + dropdown results
+// Search Bar — slide down below nav
 (function() {
-    const navSearch = document.getElementById('navSearch');
-    const searchInput = document.getElementById('searchInput');
-    const searchDropdown = document.getElementById('searchDropdown');
-    if (!navSearch || !searchInput || !searchDropdown) return;
+    var searchToggle = document.getElementById('searchToggle');
+    var searchBar = document.getElementById('searchBar');
+    var searchInput = document.getElementById('searchInput');
+    var searchDropdown = document.getElementById('searchDropdown');
+    if (!searchToggle || !searchBar || !searchInput || !searchDropdown) return;
 
-    const searchBtn = navSearch.querySelector('.nav-search-btn');
-
-    const pages = [
+    var pages = [
         { title: 'Home', url: 'index.html', keywords: 'home education regenerative agriculture natural building cultural wisdom wellbeing bhutan school' },
         { title: 'About Jamyang Ecoversity', url: 'about.html', keywords: 'about story vision mission values founder regeneration rootedness community stewardship approach' },
         { title: 'Learning & Programs', url: 'programs.html', keywords: 'programs learning areas agriculture food systems natural building traditional knowledge holistic wellbeing livelihoods enterprise stewardship technology leadership foundational certificate' },
@@ -219,63 +218,57 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
         { title: 'Contact', url: 'contact.html', keywords: 'contact email phone address message form reach' }
     ];
 
-    // Toggle open/close
-    searchBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if (navSearch.classList.contains('open')) {
-            navSearch.classList.remove('open');
-            searchDropdown.classList.remove('visible');
-            searchInput.value = '';
-            searchInput.blur();
+    function closeSearch() {
+        searchBar.classList.remove('open');
+        searchDropdown.classList.remove('visible');
+        searchDropdown.innerHTML = '';
+        searchInput.value = '';
+    }
+
+    // Toggle bar
+    searchToggle.addEventListener('click', function() {
+        if (searchBar.classList.contains('open')) {
+            closeSearch();
         } else {
-            navSearch.classList.add('open');
-            setTimeout(function() { searchInput.focus(); }, 50);
+            searchBar.classList.add('open');
+            setTimeout(function() { searchInput.focus(); }, 300);
         }
     });
 
-    // Search on typing
+    // Filter on typing
     searchInput.addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
+        var query = this.value.trim().toLowerCase();
         searchDropdown.innerHTML = '';
         if (query.length < 2) {
             searchDropdown.classList.remove('visible');
             return;
         }
-
-        const matches = pages.filter(function(p) {
-            return p.title.toLowerCase().includes(query) || p.keywords.includes(query);
+        var matches = pages.filter(function(p) {
+            return p.title.toLowerCase().indexOf(query) !== -1 || p.keywords.indexOf(query) !== -1;
         });
-
         if (matches.length === 0) {
             searchDropdown.innerHTML = '<p class="search-no-results">No results found.</p>';
         } else {
             matches.forEach(function(p) {
-                var item = document.createElement('a');
-                item.href = p.url;
-                item.className = 'search-result-item';
-                item.innerHTML = '<h4>' + p.title + '</h4><p>' + p.url + '</p>';
-                searchDropdown.appendChild(item);
+                var a = document.createElement('a');
+                a.href = p.url;
+                a.className = 'search-result-item';
+                a.innerHTML = '<h4>' + p.title + '</h4><p>' + p.url + '</p>';
+                searchDropdown.appendChild(a);
             });
         }
         searchDropdown.classList.add('visible');
     });
 
-    // Close on Escape
+    // Escape to close
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            navSearch.classList.remove('open');
-            searchDropdown.classList.remove('visible');
-            searchInput.value = '';
-        }
+        if (e.key === 'Escape') closeSearch();
     });
 
-    // Close when clicking outside
+    // Click outside to close
     document.addEventListener('click', function(e) {
-        if (!navSearch.contains(e.target)) {
-            navSearch.classList.remove('open');
-            searchDropdown.classList.remove('visible');
-            searchInput.value = '';
+        if (!searchBar.contains(e.target) && e.target !== searchToggle && !searchToggle.contains(e.target)) {
+            closeSearch();
         }
     });
 })();

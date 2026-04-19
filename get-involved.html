@@ -29,13 +29,9 @@
                     <li><a href="get-involved.html" class="nav-link active">Get Involved</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="nav-search" id="navSearch">
-                    <input type="text" class="nav-search-input" id="searchInput" placeholder="Search..." autocomplete="off">
-                    <button class="nav-search-btn" aria-label="Search">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </button>
-                    <div class="search-dropdown" id="searchDropdown"></div>
-                </div>
+                <button class="nav-search-btn" id="searchToggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -43,6 +39,12 @@
                 </div>
             </div>
         </nav>
+        <div class="search-bar" id="searchBar">
+            <div class="search-bar-inner">
+                <input type="text" id="searchInput" placeholder="Search pages..." autocomplete="off">
+                <div class="search-dropdown" id="searchDropdown"></div>
+            </div>
+        </div>
     </header>
 
     <main>
