@@ -218,20 +218,40 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
         { title: 'Contact', url: 'contact.html', keywords: 'contact email phone address message form reach' }
     ];
 
+    var isOpen = false;
+
+    function openSearch() {
+        if (isOpen) return;
+        isOpen = true;
+        searchBar.classList.add('open');
+        // After slide animation, allow dropdown to overflow
+        setTimeout(function() {
+            searchBar.classList.add('show-dropdown');
+            searchInput.focus();
+        }, 320);
+    }
+
     function closeSearch() {
-        searchBar.classList.remove('open');
+        if (!isOpen) return;
+        isOpen = false;
+        searchBar.classList.remove('show-dropdown');
         searchDropdown.classList.remove('visible');
         searchDropdown.innerHTML = '';
         searchInput.value = '';
+        searchInput.blur();
+        // Small delay so overflow:hidden kicks in before slide closes
+        setTimeout(function() {
+            searchBar.classList.remove('open');
+        }, 10);
     }
 
     // Toggle bar
-    searchToggle.addEventListener('click', function() {
-        if (searchBar.classList.contains('open')) {
+    searchToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (isOpen) {
             closeSearch();
         } else {
-            searchBar.classList.add('open');
-            setTimeout(function() { searchInput.focus(); }, 300);
+            openSearch();
         }
     });
 
@@ -267,7 +287,7 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
 
     // Click outside to close
     document.addEventListener('click', function(e) {
-        if (!searchBar.contains(e.target) && e.target !== searchToggle && !searchToggle.contains(e.target)) {
+        if (isOpen && !searchBar.contains(e.target) && e.target !== searchToggle && !searchToggle.contains(e.target)) {
             closeSearch();
         }
     });
