@@ -176,6 +176,14 @@ section:nth-child(3) {
     color: inherit;
 }
 
+.card-subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
 /* Enhanced Grid Systems */
 .grid {
     display: grid;
@@ -1725,6 +1733,91 @@ section {
 
 .who-serves .section-subtitle {
     color: var(--text-light);
+}
+
+/* Outcomes Section */
+.outcomes {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.outcome-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--cream);
+    border-radius: 12px;
+    border-left: 4px solid var(--sage-green);
+}
+
+.outcome-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.outcome-item p {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Home FAQ */
+.home-faq {
+    padding: 100px 0;
+    background: var(--cream);
+}
+
+.home-faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.home-faq-item {
+    background: var(--white);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.home-faq-q {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.home-faq-a {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* CTA Trust Signal */
+.cta-trust {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .vision-statement {
