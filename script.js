@@ -224,25 +224,17 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
         if (isOpen) return;
         isOpen = true;
         searchBar.classList.add('open');
-        // After slide animation, allow dropdown to overflow
-        setTimeout(function() {
-            searchBar.classList.add('show-dropdown');
-            searchInput.focus();
-        }, 320);
+        searchInput.focus();
     }
 
     function closeSearch() {
         if (!isOpen) return;
         isOpen = false;
-        searchBar.classList.remove('show-dropdown');
+        searchBar.classList.remove('open');
         searchDropdown.classList.remove('visible');
         searchDropdown.innerHTML = '';
         searchInput.value = '';
         searchInput.blur();
-        // Small delay so overflow:hidden kicks in before slide closes
-        setTimeout(function() {
-            searchBar.classList.remove('open');
-        }, 10);
     }
 
     // Toggle bar
