@@ -621,7 +621,7 @@ section:nth-child(3) {
 /* Enhanced Hero */
 .hero {
     min-height: 100vh;
-    padding: 120px 20px 80px;
+    padding: 150px 20px 80px;
     background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
     position: relative;
     overflow: hidden;
@@ -837,7 +837,7 @@ section:nth-child(3) {
     }
     
     .hero {
-        padding: 100px 20px 60px;
+        padding: 140px 20px 60px;
     }
     
     .hero-title {
@@ -1141,7 +1141,7 @@ html {
 }
 
 body {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 140px;
 }
 
 /* Reset and Base Styles */
@@ -1200,7 +1200,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    padding: 100px 20px 60px;
+    padding: 150px 20px 60px;
     background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
     position: relative;
     overflow: hidden;
@@ -1930,7 +1930,7 @@ section {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 20px 40px;
+        padding: 140px 20px 40px;
     }
 
     .hero-title {
@@ -2066,7 +2066,7 @@ html {
 .page-hero {
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--sage-green) 100%);
     color: var(--white);
-    padding: 120px 0 80px;
+    padding: 150px 0 80px;
     text-align: center;
 }
 
@@ -3389,6 +3389,7 @@ html {
 .about-hero {
     position: relative;
     min-height: 60vh;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4252,6 +4253,7 @@ html {
 .pg-hero {
     position: relative;
     min-height: 60vh;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4985,6 +4987,7 @@ html {
 .cp-hero {
     position: relative;
     min-height: 60vh;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5470,6 +5473,7 @@ html {
 .ip-hero {
     position: relative;
     min-height: 60vh;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6158,6 +6162,7 @@ html {
 .gi-hero {
     position: relative;
     min-height: 60vh;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6995,6 +7000,7 @@ html {
 .ct-hero {
     position: relative;
     min-height: 60vh;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
