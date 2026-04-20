@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved - Jamyang Ecoversity</title>
-    <meta name="description" content="Join Jamyang Ecoversity as a partner, supporter, volunteer, or learner. Discover opportunities to contribute to regenerative education.">
+    <title>Get Involved & Contact - Jamyang Ecoversity</title>
+    <meta name="description" content="Join Jamyang Ecoversity as a partner, supporter, volunteer, or learner. Contact us for programs, partnerships, or to learn more about regenerative education.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -27,7 +27,6 @@
                     <li><a href="campus.html" class="nav-link">Campus</a></li>
                     <li><a href="impact.html" class="nav-link">Impact</a></li>
                     <li><a href="get-involved.html" class="nav-link active">Get Involved</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="nav-search-btn" id="searchToggle" aria-label="Search">
                     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -85,25 +84,25 @@
                         <span class="gi-partner-num">01</span>
                         <h3>Apply as a Learner</h3>
                         <p>If you are a young person or adult looking for a different kind of education — one rooted in nature, hands-on practice, and community — we want to hear from you. Our foundational program is currently being developed, and we are building a list of interested learners for our first cohort.</p>
-                        <a href="contact.html" class="btn btn-secondary">Express Interest</a>
+                        <a href="#contact-form" class="btn btn-secondary">Express Interest</a>
                     </div>
                     <div class="gi-partner-card">
                         <span class="gi-partner-num">02</span>
                         <h3>Support the Mission</h3>
                         <p>Your financial support helps us build the campus, develop programs, and make education accessible. Whether it is a one-time gift, ongoing support, or in-kind contribution — every bit helps this vision take root.</p>
-                        <a href="contact.html" class="btn btn-secondary">Make a Contribution</a>
+                        <a href="#contact-form" class="btn btn-secondary">Make a Contribution</a>
                     </div>
                     <div class="gi-partner-card">
                         <span class="gi-partner-num">03</span>
                         <h3>Partner With Us</h3>
                         <p>We welcome partnerships with educational institutions, NGOs, community organizations, and government bodies who share our values. Together we can co-develop programs, exchange knowledge, and amplify impact.</p>
-                        <a href="contact.html" class="btn btn-secondary">Explore Partnership</a>
+                        <a href="#contact-form" class="btn btn-secondary">Explore Partnership</a>
                     </div>
                     <div class="gi-partner-card">
                         <span class="gi-partner-num">04</span>
                         <h3>Volunteer or Share Expertise</h3>
                         <p>Have skills in farming, building, education, communications, or organizational development? We are looking for people willing to contribute their time and knowledge — on-site or remotely.</p>
-                        <a href="contact.html" class="btn btn-secondary">Offer Your Skills</a>
+                        <a href="#contact-form" class="btn btn-secondary">Offer Your Skills</a>
                     </div>
                 </div>
             </div>
@@ -183,15 +182,200 @@
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta">
+        <!-- Contact Info -->
+        <section class="ct-intro">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Prefer to Reach Us Directly?</h2>
-                    <p>You can also email us or visit our contact page for more ways to connect.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Contact Page</a>
-                        <a href="programs.html" class="btn btn-secondary">Explore What We Offer</a>
+                <div class="ct-section-head">
+                    <h2>Contact Us</h2>
+                    <p>Whether you are interested in learning, partnering, supporting, or simply want to explore what regenerative education looks like in practice, we would love to hear from you.</p>
+                </div>
+                <div class="ct-info-grid">
+                    <div class="ct-info-card">
+                        <h3>Email</h3>
+                        <p><a href="mailto:jamyang.ecoversity@gmail.com">jamyang.ecoversity@gmail.com</a></p>
+                        <span>For general inquiries and information</span>
+                    </div>
+                    <div class="ct-info-card">
+                        <h3>Phone</h3>
+                        <p>506-897-1525</p>
+                        <span>Mon-Fri, 9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="ct-info-card">
+                        <h3>Location</h3>
+                        <p>Zombabi, Barthang, Chuzagang, Sarpang, Bhutan</p>
+                        <span>Visits by appointment only</span>
+                    </div>
+                    <div class="ct-info-card">
+                        <h3>Office Hours</h3>
+                        <p>Mon-Fri: 9-5 | Sat: 10-2</p>
+                        <span>Closed on Sundays and holidays</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form + Sidebar -->
+        <section class="ct-form-section" id="contact-form">
+            <div class="container">
+                <div class="ct-section-head">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we will get back to you as soon as possible.</p>
+                </div>
+                <div class="ct-form-wrapper">
+                    <div id="formSuccess" style="display:none; background: var(--cream); border: 2px solid var(--sage-green); border-radius: 12px; padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">Thank you for reaching out!</h3>
+                        <p style="color: var(--text-light);">Your message has been sent successfully. We will get back to you as soon as possible.</p>
+                    </div>
+                    <form class="ct-form" id="contactForm" action="https://formspree.io/f/meepvayv" method="POST">
+                        <div class="ct-form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="ct-form-row">
+                            <div class="form-group">
+                                <label for="ctEmail">Email Address *</label>
+                                <input type="email" id="ctEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="programs">Program Information</option>
+                                <option value="application">Program Application</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="donation">Donation/Support</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="general">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ctMessage">Message *</label>
+                            <textarea id="ctMessage" name="message" rows="6" required placeholder="Tell us about your interest, questions, or how you'd like to collaborate..."></textarea>
+                        </div>
+                        <div class="ct-form-actions">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="reset" class="btn btn-outline">Clear Form</button>
+                        </div>
+                    </form>
+                    <div class="ct-sidebar">
+                        <div class="ct-map-box">
+                            <h3>Find Us</h3>
+                            <p>Our campus is situated within a living landscape of gardens, forests, and working demonstration systems.</p>
+                            <div class="ct-map-placeholder">
+                                <p>Map and directions coming soon</p>
+                            </div>
+                            <p><strong>Email:</strong> <a href="mailto:jamyang.ecoversity@gmail.com">jamyang.ecoversity@gmail.com</a></p>
+                            <p><strong>Phone:</strong> 506-897-1525</p>
+                        </div>
+                        <div class="ct-response-box">
+                            <h3>Response Times</h3>
+                            <div class="ct-response-item">
+                                <h4>General Inquiries</h4>
+                                <p>2-3 business days</p>
+                            </div>
+                            <div class="ct-response-item">
+                                <h4>Program Applications</h4>
+                                <p>Within 1 week</p>
+                            </div>
+                            <div class="ct-response-item">
+                                <h4>Partnership Proposals</h4>
+                                <p>Within 5 business days</p>
+                            </div>
+                            <div class="ct-response-item">
+                                <h4>Urgent Matters</h4>
+                                <p>Call 506-897-1525</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="ct-social">
+            <div class="container">
+                <div class="ct-section-head">
+                    <h2>Connect With Us</h2>
+                    <p>Follow our journey and join the global conversation about regenerative education.</p>
+                </div>
+                <div class="ct-social-grid">
+                    <a href="#" class="ct-social-card" aria-label="Facebook">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <h3>Facebook</h3>
+                        <p>Updates and community discussions</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="Instagram">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        <h3>Instagram</h3>
+                        <p>Visual stories from campus and programs</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="Twitter">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <h3>Twitter / X</h3>
+                        <p>News, insights, and regenerative resources</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="YouTube">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <h3>YouTube</h3>
+                        <p>Workshops, talks, and educational content</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="LinkedIn">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <h3>LinkedIn</h3>
+                        <p>Professional updates and partnerships</p>
+                    </a>
+                    <a href="#" class="ct-social-card" aria-label="Newsletter">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <h3>Newsletter</h3>
+                        <p>Monthly updates on programs and impact</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="ct-faq">
+            <div class="container">
+                <div class="ct-section-head ct-section-head-light">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="ct-faq-grid">
+                    <div class="ct-faq-item">
+                        <h3>How can I apply to your programs?</h3>
+                        <p>Visit our Programs page or contact us directly for application details. We offer rolling admissions for most programs.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>Do you offer financial aid or scholarships?</h3>
+                        <p>Yes. We offer need-based scholarships and fellowships. Contact us for details on sponsoring a learner or applying for support.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>Can I visit the campus?</h3>
+                        <p>Campus visits are available by appointment. Please contact us at least two weeks in advance to schedule a tour.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>How can I partner with Jamyang Ecoversity?</h3>
+                        <p>We welcome partnerships with educational institutions, community organizations, businesses, and government agencies worldwide. Reach out with your ideas.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>Do you offer online or distance learning?</h3>
+                        <p>Our core programs are residential and hands-on. We are developing digital resources and remote workshops. Join our newsletter for updates.</p>
+                    </div>
+                    <div class="ct-faq-item">
+                        <h3>How can I volunteer or contribute expertise?</h3>
+                        <p>We welcome volunteers and practitioners from around the world. Use the form above or contact us with your skills and availability.</p>
                     </div>
                 </div>
             </div>
@@ -211,7 +395,6 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="programs.html">Learning & Programs</a></li>
                         <li><a href="get-involved.html">Get Involved</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -220,8 +403,15 @@
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
-                    <p>Email: jamyang.ecoversity@gmail.com</p>
+                    <p>Email: <a href="mailto:jamyang.ecoversity@gmail.com" style="color: inherit;">jamyang.ecoversity@gmail.com</a></p>
                     <p>Phone: 506-897-1525</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                        <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -232,24 +422,28 @@
 
     <script src="script.js"></script>
     <script>
-        const form = document.getElementById('involvementForm');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const data = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(function(response) {
-                if (response.ok) {
-                    form.style.display = 'none';
-                    document.getElementById('formSuccess').style.display = 'block';
-                    form.reset();
-                } else {
+        // AJAX form submission for both forms
+        ['involvementForm', 'contactForm'].forEach(function(id) {
+            var form = document.getElementById(id);
+            if (!form) return;
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var data = new FormData(form);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                }).then(function(response) {
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        document.getElementById('formSuccess').style.display = 'block';
+                        form.reset();
+                    } else {
+                        alert('Oops! Something went wrong. Please try again.');
+                    }
+                }).catch(function() {
                     alert('Oops! Something went wrong. Please try again.');
-                }
-            }).catch(function() {
-                alert('Oops! Something went wrong. Please try again.');
+                });
             });
         });
     </script>

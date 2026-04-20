@@ -214,8 +214,7 @@ document.querySelectorAll('.card, .challenge-card, .pillar-card, .learning-card'
         { title: 'Learning & Programs', url: 'programs.html', keywords: 'programs learning areas agriculture food systems natural building traditional knowledge holistic wellbeing livelihoods enterprise stewardship technology leadership foundational certificate' },
         { title: 'Campus & Model', url: 'campus.html', keywords: 'campus infrastructure farm garden building workshop accommodation kitchen governance phases design' },
         { title: 'Impact', url: 'impact.html', keywords: 'impact outcomes stories measurement growing' },
-        { title: 'Get Involved', url: 'get-involved.html', keywords: 'get involved learner support donate partner volunteer expertise contribute scholarship' },
-        { title: 'Contact', url: 'contact.html', keywords: 'contact email phone address message form reach' }
+        { title: 'Get Involved & Contact', url: 'get-involved.html', keywords: 'get involved learner support donate partner volunteer expertise contribute scholarship contact email phone address message form reach' }
     ];
 
     var isOpen = false;
